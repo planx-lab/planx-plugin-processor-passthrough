@@ -1,0 +1,9 @@
+name: processor-passthrough
+type: processor
+version: 1.0.0
+protocol: v4
+entry:
+  binary: processor-passthrough
+resources:
+  max_sessions: 4
+description: "Passthrough processor for testing and demonstration"
