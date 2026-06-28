@@ -6,5 +6,17 @@ import (
 )
 
 func main() {
-	sdk.ServeProcessor(plugin.New)
+	sdk.Serve(sdk.Plugin{
+		ID:          "processor-passthrough",
+		Version:     "1.0.0",
+		DisplayName: "Passthrough Processor",
+		Description: "Passthrough processor for testing and demonstration",
+		Summary:     "Returns each batch unchanged (1:1).",
+		Components: []sdk.ComponentSpec{{
+			ID:          "processor",
+			Kind:        sdk.KindProcessor,
+			DisplayName: "Passthrough",
+			Processor:   plugin.New,
+		}},
+	})
 }
