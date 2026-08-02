@@ -1,6 +1,10 @@
-# Built plugin binary (anchored to repo root)
+# Built plugin binary (the canonical name AND any plugin-id-named sibling)
 /plugin
+/processor-passthrough
 # Plugin handshake artifact (written at startup)
 planx.handshake
 # Test binaries
 *.test
+# Build/runtime output
+/build/
+/dist/
