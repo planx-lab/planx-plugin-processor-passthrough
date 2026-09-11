@@ -27,7 +27,6 @@ RUN addgroup -S planx && adduser -S -G planx planx
 WORKDIR /plugin
 
 COPY --from=builder /processor-passthrough /plugin/processor-passthrough
-COPY planx-plugin-processor-passthrough/manifest.yaml /plugin/manifest.yaml
 
 RUN chown -R planx:planx /plugin
 
